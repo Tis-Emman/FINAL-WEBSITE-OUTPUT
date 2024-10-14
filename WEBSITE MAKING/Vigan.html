@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigan</title>
+</head>
+
+<style>
+
+    body{
+        background-color: rgba(232, 240, 217, 0.336);
+        user-select: none;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+        transition: background-color 0.3s;
+    }
+
+    .hamburger:hover .line {
+        background-color: #333;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 10;
+        padding: 10px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .logo img {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+            z-index: 10;
+        }
+
+   .mytext{
+        position: absolute;
+        height: 10vh;
+      display: flex;
+    right: 10px;
+      font-size: 45px;
+      color: rgb(25, 116, 235);
+      margin-right: 75vh;
+      margin-top: 7vh;
+   }
+
+   .Boracay img{
+   
+    
+    margin: 0 auto;
+    margin-top: 18vh;
+    margin-left: 40px;
+    width: 450px;
+    border-radius: 8px;
+    height: 300px;
+   }
+
+   .description{
+    display: flex;
+      justify-content: center; 
+      align-items: center;
+      font-size: 20px;
+      margin-top: -35vh;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #534c4c;
+   
+    
+   }
+
+   .description2{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      margin-top: 25px;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #534c4c;
+    margin-top: -5px;
+   }
+
+   .Boracay3 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 40px;
+
+   }
+
+   .map iframe {
+    right: -20px;
+    top: 69%;
+    margin-right: 30px;
+    position: absolute;
+}
+
+.mytext2{
+        height: 20vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      color: rgb(25, 116, 235);
+   }
+
+.location_description{
+    
+      font-size: 20px;
+      margin-top: 25px;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #912a2a;
+    margin-top: -5px;
+}
+
+ul {
+            position: fixed;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10vh;
+            
+        }
+
+ 
+        li {
+            margin: 20px 0; 
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #534c4c;
+        }
+
+a:hover{
+    color: #a3a0a0;
+  
+}
+
+.Palawan {
+    position: absolute; 
+    width: 200px;
+    height: 130px;
+    right: 20px; 
+    top: 13vh; 
+}
+
+.Palawan img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+}
+
+.Palawan img:hover {
+    filter: brightness(70%); /* Darkens the image */
+}
+
+
+.Palawan:hover::after {
+    content: "Cebu"; 
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+.Sagada img{
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 30vh;
+    margin-right: 20px;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+    right: 0;
+}
+
+.Sagada img:hover{
+    filter: brightness(70%);
+}
+
+.Sagada:hover::after {
+    content: "Iloilo"; 
+    position: absolute;
+    top: 42%; 
+    left: 94%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+.Boracay4 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 550px;
+    margin-top: -300px;
+
+}
+.Boracay4 img:hover {
+    filter: brightness(90%);
+}
+.Boracay3 img:hover {
+    filter: brightness(90%);
+}
+
+.Boracay5 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 115vh;
+    margin-top: -300px;
+}
+.Boracay5 img:hover {
+    filter: brightness(90%);
+}
+.Boracay img:hover {
+    filter: brightness(90%);
+}
+.Baguio img{
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 47vh;
+    margin-right: 20px;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+    right: 0;
+}   
+
+.Baguio img:hover{
+    filter: brightness(70%);
+}
+
+.Baguio:hover::after {
+    content: "Albay"; 
+    position: absolute;
+    top:59%; 
+    left: 94%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+
+
+</style>
+<body>
+
+    
+
+    <div class="logo">
+        <img src="Logo .png" alt="">
+    </div>
+
+   
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+
+ 
+    <div id="menu" class="menu">
+        <a href="homepage.html">Home</a>
+        <a href="explore_page.html">Explore Page</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="chapters">
+    
+    
+    </div>
+
+
+    <div class="Palawan">
+        <a href="Cebu.html"><img src="Cebu.jpg" alt=""></a>
+        <div class="hover-text"></div>
+    </div>
+
+    <div class="Sagada">
+        <a href="Iloilo.html"> <img src="Iloilo.jpg" alt=""></a>
+        <div class="hover-text"></div>  
+    </div>
+
+    <div class="Baguio">
+        <a href="Albay.html"><img src="Albay.jpg" alt=""></a>
+    </div>
+
+    <div class="mytext" id="About Boracay" >
+        <strong>Information about Vigan</strong>
+    </div>
+
+    <div class="Boracay">
+    <img src="vigan2.jpg" alt="">
+    </div>
+
+   
+    
+
+    <div class="description">
+        <p>
+            <span style="color: rgb(25, 116, 235);">Vigan</span> Located on the western coast of the large island of Luzon, facing the West Philippine Sea, it is a UNESCO World Heritage Site and it is one of the few Spanish colonial towns left in the Philippines whose old structures have mostly remained intact. It is well known for its sett pavements and a unique architecture of the Spanish Philippines colonial era which fuses native Philippine and Oriental building designs and construction, with colonial Spanish architecture that is still abundant in the area, 
+            mainly the bahay na bato houses and an Earthquake Baroque church. 
+    </div>
+
+    <div class="description2">
+       <p> 
+        Philippine president Elpidio Quirino, the sixth president of the Philippines, was born in Vigan, at the former location of the Provincial Jail (his father was a warden).
+         He also resided in the Syquia Mansion, which is a wedding gift of his in-laws to his wife. The entire city of Vigan was later inscribed as a UNESCO World Heritage City after being declared as a UNESCO World Heritage Site. It is a member of the Organization of World Heritage Cities (OWHC).
+    </p>
+    </div>  
+
+    <div class="Boracay3">
+        <img src="vigan1.webp" alt="">
+    </div>
+
+    <div class="Boracay4">
+        <img src="vigan3.jfif" alt="">
+    </div>
+
+    <div class="Boracay5">
+        <img src="vigan4.jpg" alt="">
+    </div>
+
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32807.99151165236!2d120.37179932062574!3d17.56351173019079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338e6f821753bae5%3A0x20035e6de330b125!2sVigan%2C%20Lalawigan%20ng%20Ilocos%20Sur!5e1!3m2!1sfil!2sph!4v1728311340610!5m2!1sfil!2sph" width="350" height="290" style="border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script>    
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

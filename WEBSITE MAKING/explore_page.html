@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+
+    <style>
+        body {
+            background-color: rgba(232, 240, 217, 0.336);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 150px;
+            position: relative;
+            padding-top: 80px;
+            user-select: none;
+        }
+
+        .image-container {
+            position: relative;
+            width: 330px;
+            margin: 20px;
+            
+        }
+
+        .image-container img {
+            height: 250px;
+            width: 100%;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .line {
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .hamburger:hover .line {
+            background-color: #333;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+            padding: 10px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .logo img {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+            z-index: 10;
+            
+        }
+
+        #Princesa-overlay{
+            margin-left: 40px;
+        }
+
+        #Dumaguete-text{
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="Logo .png" alt="">
+    </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="homepage.html" style="font-size: xx-large;">Home</a>
+        <a href="#link2 " style="font-size: xx-large;">Contact</a>
+        <a href="About us.html" style="font-size: xx-large;">About us</a>
+    </div>
+
+    <div class="image-container Boracay">
+        <a href="Boracay.html"> <img src="Boracay img.jpg" alt="Boracay"> </a>
+        <div class="text-overlay">Boracay</div>
+    </div>
+
+    <div class="image-container Palawan">
+        <a href="Palawan.html"><img src="Palawan.jpg" alt="Palawan"></a>
+        <div class="text-overlay">Palawan</div>
+    </div>
+
+    <div class="image-container Sagada">
+        <a href="Sagada.html"><img src="Sagada.webp" alt="Sagada"></a>
+        <div class="text-overlay">Sagada</div>
+    </div>
+
+    <div class="break"></div>
+
+    <div class="image-container Baguio">
+       <a href="Baguio.html"><img src="Baguio.jpg" alt="Baguio"></a> 
+        <div class="text-overlay">Baguio</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Tagaytay.html"> <img src="Tagaytay.jpg" alt="Tagaytay"> </a>
+        <div class="text-overlay">Tagaytay</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Siargao.html"> <img src="Siargao.jpg" alt="Siargao"> </a>
+        <div class="text-overlay">Siargao</div>
+    </div>
+
+    <div class="break"></div>
+
+    <div class="image-container">
+       <a href="Dumaguete.html"> <img src="Dumaguete.jpg" alt="Dumaguete"> </a>
+        <div class="text-overlay" id="Dumaguete-text">Dumaguete</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Cebu.html"> <img src="Cebu.jpg" alt="Cebu"> </a>
+        <div class="text-overlay">Cebu</div>
+    </div>
+
+    <div class="image-container">
+       <a href="Iloilo.html"> <img src="Iloilo.jpg" alt="Iloilo"> </a>
+        <div class="text-overlay">Iloilo</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Vigan.html"><img src="vigan.jpg" alt=""></a>
+        <div class="text-overlay" id="Princesa-overlay">Vigan</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Albay.html"><img src="Albay.jpg" alt=""></a>
+        <div class="text-overlay"> Albay</div>
+    </div>
+
+    <div class="image-container">
+        <a href="Batanes.html"><img src="Batanes.jpg" alt=""></a>
+        <div class="text-overlay">Batanes</div>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

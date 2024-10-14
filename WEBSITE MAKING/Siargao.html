@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siargao</title>
+</head>
+
+<style>
+
+    body{
+        background-color: rgba(232, 240, 217, 0.336);
+        user-select: none;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+        transition: background-color 0.3s;
+    }
+
+    .hamburger:hover .line {
+        background-color: #333;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 10;
+        padding: 10px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .logo img {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+            z-index: 10;
+        }
+
+   .mytext{
+        position: absolute;
+        height: 10vh;
+      display: flex;
+    right: 10px;
+      font-size: 45px;
+      color: rgb(25, 116, 235);
+      margin-right: 75vh;
+      margin-top: 7vh;
+   }
+
+   .Boracay img{
+   
+    
+    margin: 0 auto;
+    margin-top: 18vh;
+    margin-left: 40px;
+    width: 450px;
+    border-radius: 8px;
+    height: 300px;
+   }
+
+   .description{
+    display: flex;
+      justify-content: center; 
+      align-items: center;
+      font-size: 20px;
+      margin-top: -35vh;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #534c4c;
+   
+    
+   }
+
+   .description2{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      margin-top: 25px;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #534c4c;
+    margin-top: -5px;
+   }
+
+   .Boracay3 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 40px;
+
+   }
+
+   .map iframe {
+    right: -20px;
+    top: 74%;
+    margin-right: 30px;
+    position: absolute;
+}
+
+.mytext2{
+        height: 20vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      color: rgb(25, 116, 235);
+   }
+
+.location_description{
+    
+      font-size: 20px;
+      margin-top: 25px;
+      margin-left: 60vh;
+      margin-right: 60vh;
+      color: #912a2a;
+    margin-top: -5px;
+}
+
+ul {
+            position: fixed;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10vh;
+            
+        }
+
+ 
+        li {
+            margin: 20px 0; 
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #534c4c;
+        }
+
+a:hover{
+    color: #a3a0a0;
+  
+}
+
+.Palawan {
+    position: absolute; 
+    width: 200px;
+    height: 130px;
+    right: 20px; 
+    top: 13vh; 
+}
+
+.Palawan img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+}
+
+.Palawan img:hover {
+    filter: brightness(70%); /* Darkens the image */
+}
+
+
+.Palawan:hover::after {
+    content: "Dumaguete"; 
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+.Sagada img{
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 30vh;
+    margin-right: 20px;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+    right: 0;
+}
+
+.Sagada img:hover{
+    filter: brightness(70%);
+}
+
+.Sagada:hover::after {
+    content: "Palawan Island"; 
+    position: absolute;
+    top: 42%; 
+    left: 94%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+.Boracay4 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 550px;
+    margin-top: -300px;
+
+}
+.Boracay4 img:hover {
+    filter: brightness(90%);
+}
+.Boracay3 img:hover {
+    filter: brightness(90%);
+}
+
+.Boracay5 img{
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    height: 300px;
+    margin-top: 15vh;
+    border-radius: 8px;
+    margin-left: 115vh;
+    margin-top: -300px;
+}
+.Boracay5 img:hover {
+    filter: brightness(90%);
+}
+.Boracay img:hover {
+    filter: brightness(90%);
+}
+.Baguio img{
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    top: 47vh;
+    margin-right: 20px;
+    border-radius: 30px;
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+    right: 0;
+}   
+
+.Baguio img:hover{
+    filter: brightness(70%);
+}
+
+.Baguio:hover::after {
+    content: "Baguio"; 
+    position: absolute;
+    top:59%; 
+    left: 94%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1; 
+}
+
+
+
+</style>
+<body>
+
+    
+
+    <div class="logo">
+        <img src="Logo .png" alt="">
+    </div>
+
+   
+    <div class="hamburger" onclick="toggleMenu()">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+
+ 
+    <div id="menu" class="menu">
+        <a href="homepage.html">Home</a>
+        <a href="explore_page.html">Explore Page</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="chapters">
+    
+    
+    </div>
+
+
+    <div class="Palawan">
+        <a href="Dumaguete.html"><img src="Dumaguete.jpg" alt=""></a>
+        <div class="hover-text"></div>
+    </div>
+
+    <div class="Sagada">
+        <a href="Palawan.html"> <img src="Palawan.jpg " alt=""></a>
+        <div class="hover-text"></div>  
+    </div>
+
+    <div class="Baguio">
+        <a href="Baguio.html"><img src="Baguio.jpg" alt=""></a>
+    </div>
+
+    <div class="mytext" id="About Boracay" >
+        <strong>Information about Siargao</strong>
+    </div>
+
+    <div class="Boracay">
+    <img src="siargao1.jpg" alt="">
+    </div>
+
+   
+    
+
+    <div class="description">
+        <p>
+            <span style="color: rgb(25, 116, 235);">Siargao</span> is a tear-drop shaped island in the Philippine Sea situated 196 kilometers southeast of Tacloban. It has a land area of approximately 437 square kilometres (169 sq mi). The east coast is relatively straight with one deep inlet, Port Pilar. The coastline is marked by a succession of reefs, small points and white, sandy beaches. The neighboring islands and islets have similar landforms. Siargao is known as the surfing capital of the Philippines, 
+            and was voted the Best Island in Asia in the 2021 Conde Nast Travelers Readers awards.
+        </p>
+    </div>
+
+    <div class="description2">
+       <p> Siargao is a famous tourist destination, well-known for its many surfing spots and featured in the film Siargao for such qualities. Surfing is so ingrained in the identity of Siargao, that in 2022, two political families from Surigao Del Norte traded 
+        barbs over the cancellation of a national surfing competition hosted on the island. Siargao Island is greatly influenced by the winds and currents coming uninterrupted from the Pacific Ocean, intensified by the Mindanao current running westward through the Siargao Strait. The tide of Siargao is diurnal with tidal curves typically present, especially on the east coast of the island.
+    </p>
+    </div>  
+
+    <div class="Boracay3">
+        <img src="siargao2.jpg" alt="">
+    </div>
+
+    <div class="Boracay4">
+        <img src="siargao3.jpg" alt="">
+    </div>
+
+    <div class="Boracay5">
+        <img src="siargao4.jpg" alt="">
+    </div>
+
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d271194.74992721615!2d125.8942056629259!3d9.90405371926311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3304043652d9e9b3%3A0xd4c56a60c9a11b84!2sSiargao%20Islands!5e1!3m2!1sfil!2sph!4v1728310914331!5m2!1sfil!2sph" width="350" height="290" style="border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
